@@ -7,7 +7,8 @@
     <!-- COMMON TAGS -->
     <title>{{ .Title }}</title>
     <!-- Search Engine -->
-    <meta name="description" content="{{ .Description }}">
+    <!-- <meta name="description" content="{{ .Description }}"> -->
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
     <meta name="image" content="{{ $.Param " image " }}">
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="{{ .Title }}">
@@ -16,14 +17,16 @@
     <!-- Twitter -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ .Title }}">
-    <meta name="twitter:description" content="{{ .Description }}">
+    <!-- <meta name="twitter:description" content="{{ .Description }}"> -->
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
     <meta name="twitter:site" content="@{{ $.Site.Params.twitter }}">
     <meta name="twitter:creator" content="@{{ $.Site.Params.twitter }}">
     <meta name="twitter:image:src" content="{{ $.Param " image " }}">
     <!-- Twitter - Article -->
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="{{ .Title }}">
-    <meta name="og:description" content="{{ .Description }}"> {{ if $.Param "image" }}
+    <!-- <meta name="og:description" content="{{ .Description }}"> {{ if $.Param "image" }} -->
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}" />
     <meta name="og:image" content="{{ .Site.BaseURL}}{{ $.Param " image " }}">{{ end }}
     <meta name="og:url" content="{{ .Permalink }}">
     <meta name="og:site_name" content="{{ .Title }}">
