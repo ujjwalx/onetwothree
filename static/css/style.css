@@ -218,7 +218,7 @@ table th {
 
 img {
     width: 100%;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 a {
@@ -363,3 +363,4 @@ blockquote p {
 .twitter-tweet a:focus {
     text-decoration: underline;
 }
+
