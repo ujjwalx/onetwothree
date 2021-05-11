@@ -11,20 +11,24 @@
     <meta name="image" content="{{ $.Param " image " }}">
     <!-- Schema.org for Google -->
     <meta itemprop="name" content="{{ .Title }}">
-    <meta itemprop="description" content="{{ .Description }}">
+    <!-- <meta itemprop="description" content="{{ .Description }}"> -->
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
     <meta itemprop="image" content="{{ $.Param " image " }}">
     <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
+    <!-- <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="{{ .Title }}">
     <meta name="twitter:description" content="{{ .Description }}">
     <meta name="twitter:site" content="@{{ $.Site.Params.twitter }}">
     <meta name="twitter:creator" content="@{{ $.Site.Params.twitter }}">
-    <meta name="twitter:image:src" content="{{ $.Param " image " }}">
+    <meta name="twitter:image:src" content="{{ $.Param " image " }}"> -->
     <!-- Twitter - Article -->
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="{{ .Title }}">
-    <meta name="og:description" content="{{ .Description }}"> {{ if $.Param "image" }}
-    <meta name="og:image" content="{{ .Site.BaseURL}}{{ $.Param " image " }}">{{ end }}
+    <!-- <meta name="og:description" content="{{ .Description }}">  -->
+    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+    {{ if $.Param "image" }}
+    <meta name="og:image" content="{{ .Site.BaseURL}}{{ $.Param " image " }}">
+    {{ end }}
     <meta name="og:url" content="{{ .Permalink }}">
     <meta name="og:site_name" content="{{ .Title }}">
     <meta name="og:type" content="article">
@@ -37,8 +41,8 @@
 
 <body>
     <header>
-        <a href="/" style="vertical-align: middle;color:#777;"><strong>{{ $.Site.Title }}</strong>&nbsp;&nbsp;|&nbsp;&nbsp;
-		</a> {{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with $.Site.GetPage "page" . }}<a href="{{ lower .Permalink }}" style="color:#777;"><strong>{{ title .Title
+        <a href="/" style="vertical-align: middle;color:#777;"><strong>Ujjwal Sharma</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+        {{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with $.Site.GetPage "page" . }}<a href="{{ lower .Permalink }}" style="color:#777;"><strong>{{ title .Title
 				}}</strong></a>{{ end }}{{ end }} {{ if .Draft }} DRAFT {{ end }}
         <a href="/index.xml" style="color:#777;float: right;"><strong>
 				&nbsp;
