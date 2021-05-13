@@ -226,7 +226,7 @@ img {
 }
 
 a {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: #265301;
     -moz-transition-property: background;
     -webkit-transition-property: background;
