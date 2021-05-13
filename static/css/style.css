@@ -236,6 +236,10 @@ a {
     transition-duration: 0.2s;
 }
 
+a.header{
+    text-decoration: none;
+}
+
 div.nav a:active div {
     background: #cacaca;
 }
