@@ -259,7 +259,7 @@ a:hover {
     border-radius: 10px;
 }
 
-a:after {
+/* a:after {
     position: relative;
     content: "\FEFF°";
     margin-left: 0.10em;
@@ -267,7 +267,7 @@ a:after {
     top: -0.30em;
     left: -0.1em;
     color: #d21c1c;
-}
+} */
 
 code {
     font-size: 95%;
