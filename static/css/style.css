@@ -125,6 +125,7 @@ body {
     -o-font-feature-settings: 'liga' 1;
     -ms-font-feature-settings: 'liga' 1;
     font-feature-settings: 'liga' 1;
+    background-color: #f7fafc;
 }
 
 div.content {
@@ -220,14 +221,14 @@ table th {
     line-height: 1.05;
 }
 
-img {
+/* img {
     width: 100%;
     border-radius: 5px;
-}
+} */
 
 a {
     /* text-decoration: none; */
-    color: #265301;
+    color: #18724c;
     -moz-transition-property: background;
     -webkit-transition-property: background;
     transition-property: background;
@@ -240,7 +241,7 @@ a.header{
     text-decoration: none;
     font-size: calc(1em + 0.4vw);
     vertical-align: middle;
-    color: #777;
+    color: #1f9967
 }
 
 div.nav a:active div {
@@ -374,4 +375,6 @@ blockquote p {
 .twitter-tweet a:focus {
     text-decoration: underline;
 }
+
+
 
