@@ -42,9 +42,9 @@
 <body>
     <header>
         <a class="header" href="/" ><strong>Ujjwal Sharma</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        {{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with $.Site.GetPage "page" . }}<a class="header" href="{{ lower .Permalink }}" style="color:#777;"><strong>{{ title .Title
+        {{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with $.Site.GetPage "page" . }}<a class="header" href="{{ lower .Permalink }}" style="color:#b23b82;"><strong>{{ title .Title
 				}}</strong></a>{{ end }}{{ end }} {{ if .Draft }} DRAFT {{ end }}
-        <a class = "header" href="/index.xml" style="float : right;"><strong>
+        <!-- <a class = "header" href="/index.xml" style="float : right;"><strong>
 				&nbsp;
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
 					stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
@@ -53,5 +53,5 @@
 					<path d="M4 4a16 16 0 0 1 16 16"></path>
 					<circle cx="5" cy="19" r="1"></circle>
 				</svg>
-			</strong></a>
+			</strong></a> -->
     </header>
