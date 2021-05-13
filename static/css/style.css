@@ -238,6 +238,9 @@ a {
 
 a.header{
     text-decoration: none;
+    font-size: calc(1em + 0.4vw);
+    vertical-align: middle;
+    color: #777;
 }
 
 div.nav a:active div {
