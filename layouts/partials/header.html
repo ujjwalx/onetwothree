@@ -25,7 +25,7 @@
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
     <meta name="og:title" content="{{ .Title }}">
     <!-- <meta name="og:description" content="{{ .Description }}">  -->
-    <meta name="description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
+    <meta name="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
     {{ if $.Param "image" }}
     <meta name="og:image" content="{{ .Site.BaseURL}}{{ $.Param " image " }}">
     {{ end }}
