@@ -4,8 +4,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- COMMON TAGS -->
-  <title>{{ .Title }}</title>
+
+  {{ if .IsHome }}
+		<title>{{ .Title }}</title>
+	{{ else }}
+		<title> Ujjwal Sharma | {{ .Title }}</title>
+	{{ end }}
+ 
+  <link rel="canonical" href="{{ .Permalink }}" />  
+
   <!-- Search Engine -->
   <meta name="description" content="{{.Description | default .Site.Params.SiteDescription}}">
   <meta name="image" content="{{ $.Param " image " }}">
