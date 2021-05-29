@@ -19,8 +19,13 @@
   <meta name="description" content="{{.Description | default .Site.Params.SiteDescription}}">
   <meta name="image" content="{{ $.Param " image " }}">
   <!-- Control the behavior of search engine crawling and indexing -->
-  <meta name="robots" content="index,follow"><!-- All Search Engines -->
-  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+  {{ if .Params.noindex }}
+	  <meta name="robots" content="noindex" />
+    <meta name="googlebot" content="noindex">
+  {{ else }}
+    <meta name="robots" content="index,follow"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+  {{ end }}
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="{{ .Title }}">
   <meta itemprop="description" content="{{.Description | default .Site.Params.SiteDescription}}">
