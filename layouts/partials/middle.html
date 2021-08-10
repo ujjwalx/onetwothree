@@ -1,11 +1,18 @@
 <div class="content">
-    {{ range first 100000 .Site.RegularPages }} {{ if eq .Title "About"}} {{ .Content }} {{ end }} {{ end }}
-    <!-- <h1>{{ title .Data.Term }} posts</h1>
-    {{ range first 100000 .Site.RegularPages }} {{ if eq .Type "post"}}
-    <p>
-        <aside>{{ .Date.Format "January 2, 2006"}} >
-        </aside>
-        <a href="{{ .Permalink }}" style="color:black;">{{ .Title }}</a>{{ if .Draft }} <span style="color:#FF4136;">(unpublished)</span> {{ end }}
-    </p>
-    {{ end }} {{ end }} -->
+    {{ range first 100000 .Site.RegularPages }} 
+    {{ if eq .Title "Hi, I am Ujjwal"}} 
+        {{ .Content }} 
+    
+        <!-- <h1>{{ title .Data.Term }} posts</h1>
+        {{- range ( where site.RegularPages "Section" "blog" | first 3 ) }}
+        <p>
+            <aside>{{ .Date.Format "January 2, 2006"}} >
+            </aside>
+            <a href="{{ .Permalink }}" style="color:black;">{{ .Title }}</a>{{ if .Draft }} <span style="color:#FF4136;">(unpublished)</span> {{ end }}
+        </p>
+
+    {{ end }} -->
+    {{ end }}
+    {{ end }}
+
 </div>
