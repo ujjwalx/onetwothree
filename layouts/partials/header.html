@@ -18,7 +18,7 @@
   <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
   <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
-  <meta name="application-name" content="&nbsp;"/>
+  <meta name="application-name" content="&nbsp;" />
   <meta name="msapplication-TileColor" content="#FFFFFF" />
   <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
   <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
@@ -29,23 +29,23 @@
   <!-- COMMON TAGS -->
 
   {{ if .IsHome }}
-		<title>{{ .Title }}</title>
-	{{ else }}
-		<title> Ujjwal Sharma | {{ .Title }}</title>
-	{{ end }}
- 
-  <link rel="canonical" href="{{ .Permalink }}" />  
+  <title>{{ .Title }}</title>
+  {{ else }}
+  <title> Ujjwal Sharma | {{ .Title }}</title>
+  {{ end }}
+
+  <link rel="canonical" href="{{ .Permalink }}" />
 
   <!-- Search Engine -->
   <meta name="description" content="{{.Description | default .Site.Params.SiteDescription}}">
   <meta name="image" content="{{ $.Param " image " }}">
   <!-- Control the behavior of search engine crawling and indexing -->
   {{ if .Params.noindex }}
-	  <meta name="robots" content="noindex" />
-    <meta name="googlebot" content="noindex">
+  <meta name="robots" content="noindex" />
+  <meta name="googlebot" content="noindex">
   {{ else }}
-    <meta name="robots" content="index,follow"><!-- All Search Engines -->
-    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+  <meta name="robots" content="index,follow"><!-- All Search Engines -->
+  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
   {{ end }}
   <!-- Schema.org for Google -->
   <meta itemprop="name" content="{{ .Title }}">
@@ -73,6 +73,7 @@
   <!-- <meta name="article:tag" content="{{ range .Params.tags }}{{.}} {{end}}"> -->
   <link rel="stylesheet" type="text/css" href="/css/style{{ $.Site.Params.style }}.css">
   <script src="/js/caption.js"></script>
+  <script data-goatcounter="https://ujjwal.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </head>
 
 <body>
