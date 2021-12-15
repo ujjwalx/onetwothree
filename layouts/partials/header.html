@@ -78,7 +78,7 @@
 
 <body>
   <header>
-    <a class="header" href="/"><strong>Ujjwal Sharma</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    <a class="header" href="/"><strong>Ujjwal Sharma</strong></a>&nbsp;&nbsp;—&nbsp;&nbsp;
     {{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with
     $.Site.GetPage "page" . }}<a class="header" href="{{ lower .Permalink }}" style="color:#b23b82;"><strong>{{ title
         .Title
