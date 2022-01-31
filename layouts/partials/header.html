@@ -2,65 +2,65 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
-  <link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
-  <meta name="application-name" content="&nbsp;" />
-  <meta name="msapplication-TileColor" content="#FFFFFF" />
-  <meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
-  <meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
-  <meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
-  <meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
-  <meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;" />
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="/favicon/mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="/favicon/mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="/favicon/mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="/favicon/mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="/favicon/mstile-310x310.png" />
 
-  <!-- COMMON TAGS -->
+	<!-- COMMON TAGS -->
 
-  {{ if .IsHome }}
-  <title>{{ .Title }}</title>
-  {{ else }}
-  <title> Ujjwal Sharma | {{ .Title }}</title>
-  {{ end }}
+	{{ if .IsHome }}
+	<title>{{ .Title }}</title>
+	{{ else }}
+	<title> Ujjwal Sharma | {{ .Title }}</title>
+	{{ end }}
 
-  <link rel="canonical" href="{{ .Permalink }}" />
+	<link rel="canonical" href="{{ .Permalink }}" />
 
-  <!-- Search Engine -->
-  <meta name="description" content="{{.Description | default .Site.Params.SiteDescription}}">
-  <meta name="image" content="{{ $.Param " image " }}">
-  <!-- Control the behavior of search engine crawling and indexing -->
-  {{ if .Params.noindex }}
-  <meta name="robots" content="noindex" />
-  <meta name="googlebot" content="noindex">
-  {{ else }}
-  <meta name="robots" content="index,follow"><!-- All Search Engines -->
-  <meta name="googlebot" content="index,follow"><!-- Google Specific -->
-  {{ end }}
-  <!-- Schema.org for Google -->
-  <meta itemprop="name" content="{{ .Title }}">
-  <meta itemprop="description" content="{{.Description | default .Site.Params.SiteDescription}}">
-  <!-- <meta itemprop="image" content="{{ $.Param " image " }}"> -->
-  <!-- Twitter -->
-  <!-- <meta name="twitter:card" content="summary">
+	<!-- Search Engine -->
+	<meta name="description" content="{{.Description | default .Site.Params.SiteDescription}}">
+	<meta name="image" content="{{ $.Param " image " }}">
+	<!-- Control the behavior of search engine crawling and indexing -->
+	{{ if .Params.noindex }}
+	<meta name="robots" content="noindex" />
+	<meta name="googlebot" content="noindex">
+	{{ else }}
+	<meta name="robots" content="index,follow"><!-- All Search Engines -->
+	<meta name="googlebot" content="index,follow"><!-- Google Specific -->
+	{{ end }}
+	<!-- Schema.org for Google -->
+	<meta itemprop="name" content="{{ .Title }}">
+	<meta itemprop="description" content="{{.Description | default .Site.Params.SiteDescription}}">
+	<!-- <meta itemprop="image" content="{{ $.Param " image " }}"> -->
+	<!-- Twitter -->
+	<!-- <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{{ .Title }}">
   <meta name="twitter:description" content="{{ .Description }}">
   <meta name="twitter:site" content="@{{ $.Site.Params.twitter }}">
   <meta name="twitter:creator" content="@{{ $.Site.Params.twitter }}">
   <meta name="twitter:image:src" content="{{ $.Param " image " }}"> -->
-  <!-- Twitter - Article -->
-  <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-  <!-- <meta name="og:title" content="{{ .Title }}">
+	<!-- Twitter - Article -->
+	<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+	<!-- <meta name="og:title" content="{{ .Title }}">
   <meta name="og:description" content="{{if .IsHome}}{{ $.Site.Params.description }}{{else}}{{.Description}}{{end}}">
   {{ if $.Param "image" }}
   <meta name="og:image" content="{{ .Site.BaseURL}}{{ $.Param " image " }}">
@@ -68,22 +68,26 @@
   <meta name="og:url" content="{{ .Permalink }}">
   <meta name="og:site_name" content="{{ .Title }}">
   <meta name="og:type" content="article"> -->
-  <!-- Open Graph - Article -->
-  <!-- <meta name="article:author" content="{{ $.Site.Params.twitter }}"> -->
-  <!-- <meta name="article:tag" content="{{ range .Params.tags }}{{.}} {{end}}"> -->
-  <link rel="stylesheet" type="text/css" href="/css/style{{ $.Site.Params.style }}.css">
-  <script src="/js/caption.js"></script>
-  <script data-goatcounter="https://ujjwal.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+	<!-- Open Graph - Article -->
+	<!-- <meta name="article:author" content="{{ $.Site.Params.twitter }}"> -->
+	<!-- <meta name="article:tag" content="{{ range .Params.tags }}{{.}} {{end}}"> -->
+	<link rel="stylesheet" type="text/css" href="/css/style{{ $.Site.Params.style }}.css">
+	<script src="/js/caption.js"></script>
+
+	{{ template "_internal/google_analytics.html" . }}
+	{{ template "_internal/google_analytics_async.html" . }}
+
 </head>
 
 <body>
-  <header>
-    <a class="header" href="/"><strong>Ujjwal Sharma</strong></a>&nbsp;&nbsp;—&nbsp;&nbsp;
-    {{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with
-    $.Site.GetPage "page" . }}<a class="header" href="{{ lower .Permalink }}" style="color:#b23b82;"><strong>{{ title
-        .Title
-        }}</strong></a>{{ end }}{{ end }} {{ if .Draft }} DRAFT {{ end }}
-    <!-- <a class = "header" href="/index.xml" style="float : right;"><strong>
+	<header>
+		<a class="header" href="/"><strong>Ujjwal Sharma</strong></a>&nbsp;&nbsp;—&nbsp;&nbsp;
+		{{ range $i, $e:= $.Site.Params.navigation }}{{ if eq $i 0}}{{else}}&nbsp;&nbsp;·&nbsp;&nbsp;{{end}}{{ with
+		$.Site.GetPage "page" . }}<a class="header" href="{{ lower .Permalink }}" style="color:#b23b82;"><strong>{{
+				title
+				.Title
+				}}</strong></a>{{ end }}{{ end }} {{ if .Draft }} DRAFT {{ end }}
+		<!-- <a class = "header" href="/index.xml" style="float : right;"><strong>
 				&nbsp;
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
 					stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
@@ -93,4 +97,4 @@
 					<circle cx="5" cy="19" r="1"></circle>
 				</svg>
 			</strong></a> -->
-  </header>
+	</header>
