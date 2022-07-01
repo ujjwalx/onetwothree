@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+	<style>
+		body {
+			visibility: hidden;
+			opacity: -1;
+		}
+	</style>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -72,8 +79,9 @@
 	<!-- <meta name="article:author" content="{{ $.Site.Params.twitter }}"> -->
 	<!-- <meta name="article:tag" content="{{ range .Params.tags }}{{.}} {{end}}"> -->
 	<link rel="stylesheet" type="text/css" href="/css/style{{ $.Site.Params.style }}.css">
-	<script src="/js/caption.js"></script>
 	<script data-goatcounter="https://ujjwal.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+	{{ partial "toggle.html" . }}
 </head>
 
 <body>
@@ -84,7 +92,7 @@
 				title
 				.Title
 				}}</strong></a>{{ end }}{{ end }} {{ if .Draft }} DRAFT {{ end }}
-		{{ partial "toggle.html" . }}
+		{{ partial "toggle2.html" . }}
 		<!-- <a class = "header" href="/index.xml" style="float : right;"><strong>
 				&nbsp;
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
@@ -96,3 +104,4 @@
 				</svg>
 			</strong></a> -->
 	</header>
+	<script src="/js/show_body.js"></script>
